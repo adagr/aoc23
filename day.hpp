@@ -79,7 +79,8 @@ protected:
 
     template<typename Container, typename Value>
     bool contains(const Container& container, Value value) {
-        return container.find(value) != container.end();
+        //return container.find(value) != container.end();
+        return std::find(container.begin(), container.end(), value) != container.end();
     }
 
     std::vector<std::string> lines{};
