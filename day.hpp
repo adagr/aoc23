@@ -49,11 +49,11 @@ protected:
             }
             auto pos = s.find(delim);
             if (pos == std::string::npos) {
-                numbers.emplace_back(std::stoi(s));
+                numbers.emplace_back(std::stoull(s));
                 break;
             }
                 
-            numbers.emplace_back(std::stoi(s.substr(0, pos)));
+            numbers.emplace_back(std::stoull(s.substr(0, pos)));
             s = s.erase(0, pos);
         }
 
